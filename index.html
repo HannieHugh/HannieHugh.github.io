@@ -259,7 +259,7 @@
       
     
 
-    <a href="/tags/" rel="section"><i class="menu-item-icon fa fa-fw fa-tags"></i> <br>标签<span class="badge">1</span></a>
+    <a href="/tags/" rel="section"><i class="menu-item-icon fa fa-fw fa-tags"></i> <br>标签<span class="badge">2</span></a>
 
   </li>
         
@@ -297,7 +297,7 @@
       
     
 
-    <a href="/archives/" rel="section"><i class="menu-item-icon fa fa-fw fa-archive"></i> <br>归档<span class="badge">3</span></a>
+    <a href="/archives/" rel="section"><i class="menu-item-icon fa fa-fw fa-archive"></i> <br>归档<span class="badge">4</span></a>
 
   </li>
 
@@ -362,6 +362,151 @@
           <div id="content" class="content">
             
   <section id="posts" class="posts-expand">
+    
+      
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/08/27/inputCheckbox-quxuanfeiquanxuan/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Author">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/images/header.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="HannieHugh's Blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                
+                <a href="/2019/08/27/inputCheckbox-quxuanfeiquanxuan/" class="post-title-link" itemprop="url">inputCheckbox_quxuanfeiquanxuan</a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+
+            
+            
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+
+              
+                
+              
+
+              <time title="创建时间：2019-08-27 14:33:10 / 修改时间：15:35:07" itemprop="dateCreated datePublished" datetime="2019-08-27T14:33:10+08:00">2019-08-27</time>
+            
+
+            
+              
+
+              
+            
+          </span>
+
+          
+
+          
+            
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p>//input checkbox框 全选非全选<br>  var checkboxSelect = function (id) {<br>    debugger;<br>    var exceptAllSelB = $(“#” + id + “ input[type=checkbox]”).size() - 1;<br>    $(“#” + id + “ tbody input[type=checkbox]”).change(function () {<br>      debugger;<br>      var selectedCount = $(“#” + id + “ tbody input[type=checkbox]:checked”).size();<br>      if (selectedCount == exceptAllSelB) {<br>        $(“#” + id + “ thead td input”).prop(‘checked’, true);<br>      } else {<br>        $(“#” + id + “ thead td input”).prop(‘checked’, false);<br>      }<br>    });<br>    $(“#” + id + “ thead td input”).change(function () {<br>      if ($(this).prop(“checked”)) {<br>        $(“#” + id + “ tbody input[type=checkbox]”).prop(‘checked’, true);<br>      } else {<br>        $(“#” + id + “ tbody input[type=checkbox]”).prop(‘checked’, false);<br>      }<br>    });<br>  }</p>
+
+          
+        
+      
+    </div>
+
+    
+
+    
+    
+    
+
+    
+
+    
+      
+    
+    
+
+    
+	<div>
+	  
+	</div>
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
     
       
 
@@ -764,12 +909,24 @@
                 
               
 
-              <time title="创建时间：2019-04-28 14:03:55 / 修改时间：14:03:56" itemprop="dateCreated datePublished" datetime="2019-04-28T14:03:55+08:00">2019-04-28</time>
+              <time title="创建时间：2019-04-28 14:03:55" itemprop="dateCreated datePublished" datetime="2019-04-28T14:03:55+08:00">2019-04-28</time>
             
 
             
               
 
+              
+                
+                <span class="post-meta-divider">|</span>
+                
+
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">更新于</span>
+                
+                <time title="修改时间：2019-07-04 09:43:00" itemprop="dateModified" datetime="2019-07-04T09:43:00+08:00">2019-07-04</time>
               
             
           </span>
@@ -805,7 +962,15 @@
       
         
           
-            
+            <p>1.常用的日期时间函数<br>（摘自掘金<br>作者：徐小夕<br>链接：<a href="https://juejin.im/post/5d1a45b0f265da1bb277494c）" target="_blank" rel="noopener">https://juejin.im/post/5d1a45b0f265da1bb277494c）</a><br>// 时间格式化<br>function format_date(timeStamp) {<br>    let date = new Date(timeStamp);<br>    return date.getFullYear() + “年”</p>
+<pre><code>+ prefix_zero(date.getMonth() + 1) + &quot;月&quot;
++ prefix_zero(date.getDate()) + &quot;日 &quot;
++ prefix_zero(date.getHours()) + &quot;:&quot;
++ prefix_zero(date.getMinutes());
+</code></pre><p>}</p>
+<p>// 数字格式化<br>function prefix_zero(num) {<br>    return num &gt;= 10 ? num : “0” + num;<br>}</p>
+<p>// 倒计时时间格式化<br>function format_time(timeStamp) {<br>    let day = Math.floor(timeStamp / (24 <em> 3600 </em> 1000));<br>    let leave1 = timeStamp % (24 <em> 3600 </em> 1000);<br>    let hours = Math.floor(leave1 / (3600 <em> 1000));<br>    let leave2 = leave1 % (3600 </em> 1000);<br>    let minutes = Math.floor(leave2 / (60 <em> 1000));<br>    let leave3 = leave2 % (60 </em> 1000);<br>    let seconds = Math.floor(leave3 / 1000);<br>    if (day) return day + “天” + hours + “小时” + minutes + “分”;<br>    if (hours) return hours + “小时” + minutes + “分” + seconds + “秒”;<br>    if (minutes) return minutes + “分” + seconds + “秒”;<br>    if (seconds) return seconds + “秒”;<br>    return “时间到！”;<br>}</p>
+
           
         
       
@@ -892,7 +1057,7 @@
                 
                   <a href="/archives/">
                 
-                    <span class="site-state-item-count">3</span>
+                    <span class="site-state-item-count">4</span>
                     <span class="site-state-item-name">日志</span>
                   </a>
                 </div>
@@ -922,7 +1087,9 @@
                     
                       
                     
-                    <span class="site-state-item-count">1</span>
+                      
+                    
+                    <span class="site-state-item-count">2</span>
                     <span class="site-state-item-name">标签</span>
                   
                 </div>
@@ -1040,7 +1207,7 @@
 
 <div class="theme-info">
   <div class="powered-by"></div>
-  <span class="post-count">博客全站共73字</span>
+  <span class="post-count">博客全站共326字</span>
 </div>
 
         

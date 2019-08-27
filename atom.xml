@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2019-05-16T05:37:31.412Z</updated>
+  <updated>2019-08-27T07:35:07.189Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -15,6 +15,27 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>inputCheckbox_quxuanfeiquanxuan</title>
+    <link href="http://yoursite.com/2019/08/27/inputCheckbox-quxuanfeiquanxuan/"/>
+    <id>http://yoursite.com/2019/08/27/inputCheckbox-quxuanfeiquanxuan/</id>
+    <published>2019-08-27T06:33:10.000Z</published>
+    <updated>2019-08-27T07:35:07.189Z</updated>
+    
+    <content type="html"><![CDATA[<p>//input checkbox框 全选非全选<br>  var checkboxSelect = function (id) {<br>    debugger;<br>    var exceptAllSelB = $(“#” + id + “ input[type=checkbox]”).size() - 1;<br>    $(“#” + id + “ tbody input[type=checkbox]”).change(function () {<br>      debugger;<br>      var selectedCount = $(“#” + id + “ tbody input[type=checkbox]:checked”).size();<br>      if (selectedCount == exceptAllSelB) {<br>        $(“#” + id + “ thead td input”).prop(‘checked’, true);<br>      } else {<br>        $(“#” + id + “ thead td input”).prop(‘checked’, false);<br>      }<br>    });<br>    $(“#” + id + “ thead td input”).change(function () {<br>      if ($(this).prop(“checked”)) {<br>        $(“#” + id + “ tbody input[type=checkbox]”).prop(‘checked’, true);<br>      } else {<br>        $(“#” + id + “ tbody input[type=checkbox]”).prop(‘checked’, false);<br>      }<br>    });<br>  }</p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;//input checkbox框 全选非全选&lt;br&gt;  var checkboxSelect = function (id) {&lt;br&gt;    debugger;&lt;br&gt;    var exceptAllSelB = $(“#” + id + “ input[type=c
+      
+    
+    </summary>
+    
+    
+  </entry>
   
   <entry>
     <title>Hello World</title>
@@ -61,12 +82,21 @@
     <link href="http://yoursite.com/2019/04/28/second/"/>
     <id>http://yoursite.com/2019/04/28/second/</id>
     <published>2019-04-28T06:03:55.000Z</published>
-    <updated>2019-04-28T06:03:56.000Z</updated>
+    <updated>2019-07-04T01:43:00.624Z</updated>
+    
+    <content type="html"><![CDATA[<p>1.常用的日期时间函数<br>（摘自掘金<br>作者：徐小夕<br>链接：<a href="https://juejin.im/post/5d1a45b0f265da1bb277494c）" target="_blank" rel="noopener">https://juejin.im/post/5d1a45b0f265da1bb277494c）</a><br>// 时间格式化<br>function format_date(timeStamp) {<br>    let date = new Date(timeStamp);<br>    return date.getFullYear() + “年”</p><pre><code>+ prefix_zero(date.getMonth() + 1) + &quot;月&quot;+ prefix_zero(date.getDate()) + &quot;日 &quot;+ prefix_zero(date.getHours()) + &quot;:&quot;+ prefix_zero(date.getMinutes());</code></pre><p>}</p><p>// 数字格式化<br>function prefix_zero(num) {<br>    return num &gt;= 10 ? num : “0” + num;<br>}</p><p>// 倒计时时间格式化<br>function format_time(timeStamp) {<br>    let day = Math.floor(timeStamp / (24 <em> 3600 </em> 1000));<br>    let leave1 = timeStamp % (24 <em> 3600 </em> 1000);<br>    let hours = Math.floor(leave1 / (3600 <em> 1000));<br>    let leave2 = leave1 % (3600 </em> 1000);<br>    let minutes = Math.floor(leave2 / (60 <em> 1000));<br>    let leave3 = leave2 % (60 </em> 1000);<br>    let seconds = Math.floor(leave3 / 1000);<br>    if (day) return day + “天” + hours + “小时” + minutes + “分”;<br>    if (hours) return hours + “小时” + minutes + “分” + seconds + “秒”;<br>    if (minutes) return minutes + “分” + seconds + “秒”;<br>    if (seconds) return seconds + “秒”;<br>    return “时间到！”;<br>}</p>]]></content>
     
     <summary type="html">
     
+      
+      
+        &lt;p&gt;1.常用的日期时间函数&lt;br&gt;（摘自掘金&lt;br&gt;作者：徐小夕&lt;br&gt;链接：&lt;a href=&quot;https://juejin.im/post/5d1a45b0f265da1bb277494c）&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;https://ju
+      
+    
     </summary>
     
+    
+      <category term="常用js函数" scheme="http://yoursite.com/tags/%E5%B8%B8%E7%94%A8js%E5%87%BD%E6%95%B0/"/>
     
   </entry>
   

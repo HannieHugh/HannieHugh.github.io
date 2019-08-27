@@ -1,6 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[inputCheckbox_quxuanfeiquanxuan]]></title>
+    <url>%2F2019%2F08%2F27%2FinputCheckbox-quxuanfeiquanxuan%2F</url>
+    <content type="text"><![CDATA[//input checkbox框 全选非全选 var checkboxSelect = function (id) { debugger; var exceptAllSelB = $(“#” + id + “ input[type=checkbox]”).size() - 1; $(“#” + id + “ tbody input[type=checkbox]”).change(function () { debugger; var selectedCount = $(“#” + id + “ tbody input[type=checkbox]:checked”).size(); if (selectedCount == exceptAllSelB) { $(“#” + id + “ thead td input”).prop(‘checked’, true); } else { $(“#” + id + “ thead td input”).prop(‘checked’, false); } }); $(“#” + id + “ thead td input”).change(function () { if ($(this).prop(“checked”)) { $(“#” + id + “ tbody input[type=checkbox]”).prop(‘checked’, true); } else { $(“#” + id + “ tbody input[type=checkbox]”).prop(‘checked’, false); } }); }]]></content>
+  </entry>
+  <entry>
     <title><![CDATA[Hello World]]></title>
     <url>%2F2019%2F05%2F24%2Fhello-world%2F</url>
     <content type="text"><![CDATA[Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub. Quick StartCreate a new post1$ hexo new "My New Post" More info: Writing Run server1$ hexo server More info: Server Generate static files1$ hexo generate More info: Generating Deploy to remote sites1$ hexo deploy More info: Deployment]]></content>
@@ -19,6 +24,9 @@
   <entry>
     <title><![CDATA[second]]></title>
     <url>%2F2019%2F04%2F28%2Fsecond%2F</url>
-    <content type="text"></content>
+    <content type="text"><![CDATA[1.常用的日期时间函数（摘自掘金作者：徐小夕链接：https://juejin.im/post/5d1a45b0f265da1bb277494c）// 时间格式化function format_date(timeStamp) { let date = new Date(timeStamp); return date.getFullYear() + “年” + prefix_zero(date.getMonth() + 1) + &quot;月&quot; + prefix_zero(date.getDate()) + &quot;日 &quot; + prefix_zero(date.getHours()) + &quot;:&quot; + prefix_zero(date.getMinutes()); } // 数字格式化function prefix_zero(num) { return num &gt;= 10 ? num : “0” + num;} // 倒计时时间格式化function format_time(timeStamp) { let day = Math.floor(timeStamp / (24 3600 1000)); let leave1 = timeStamp % (24 3600 1000); let hours = Math.floor(leave1 / (3600 1000)); let leave2 = leave1 % (3600 1000); let minutes = Math.floor(leave2 / (60 1000)); let leave3 = leave2 % (60 1000); let seconds = Math.floor(leave3 / 1000); if (day) return day + “天” + hours + “小时” + minutes + “分”; if (hours) return hours + “小时” + minutes + “分” + seconds + “秒”; if (minutes) return minutes + “分” + seconds + “秒”; if (seconds) return seconds + “秒”; return “时间到！”;}]]></content>
+      <tags>
+        <tag>常用js函数</tag>
+      </tags>
   </entry>
 </search>
